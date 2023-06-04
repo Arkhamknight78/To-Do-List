@@ -10,6 +10,7 @@ const app = express();
 mongoose.connect("mongodb+srv://AK78:Vinayak8158@cluster0.euxh9ex.mongodb.net/todolistDB");
 
 
+
 const itemsSchema = {
   name: String
 };

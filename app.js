@@ -112,7 +112,7 @@ app.post("/delete",function(req,res){
 }
 else
 {
- List.findOneAndUpdate({name:listName},{$pull:{items:{_id:checkeditem}}}).then(function(foundList){
+ List.findOneAndUpdate({name:listName},{$pull:{items:{_id:checkeditem}}}).then(function(foundList){  //pulling the item from the items array of the foundList because an Array is present in the ListSchema for items
 res.redirect("/"+listName);
  }).catch(function(err){
     console.log(err);
